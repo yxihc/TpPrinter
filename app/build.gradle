@@ -3,8 +3,8 @@ plugins {
 }
 
 android {
-    compileSdkVersion 30
-    buildToolsVersion "30.0.2"
+    compileSdkVersion 31
+//    buildToolsVersion "31.0.2"
 
     defaultConfig {
         applicationId "com.taopao.tpprinter"
@@ -46,4 +46,8 @@ dependencies {
 //    implementation 'com.github.TaoPaox:TpHulk:hulkbase:0.1.1'
 //    implementation 'com.github.TaoPaox:TpHulk:hulkmvp:0.1.1'
     implementation 'com.github.TaoPaox:TpHulk:0.1.1'
+
+
+    implementation 'cn.com.superLei:blelibrary:3.2.0'
+
 }
