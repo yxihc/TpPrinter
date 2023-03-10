@@ -1,21 +1,21 @@
 package com.taopao.fastprinter.templates;
 
-import androidx.annotation.Nullable;
-import androidx.viewbinding.ViewBinding;
-
 import android.os.Bundle;
 import android.view.LayoutInflater;
+
+import androidx.annotation.Nullable;
+import androidx.viewbinding.ViewBinding;
 
 import com.blankj.utilcode.util.ActivityUtils;
 import com.hjq.permissions.OnPermissionCallback;
 import com.hjq.permissions.Permission;
 import com.hjq.permissions.XXPermissions;
 import com.lvrenyang.io.Pos;
-import com.taopao.fastprinter.utils.PrinterUtils;
 import com.taopao.fastprinter.SearchBTActivity;
 import com.taopao.fastprinter.base.BaseActivity;
 import com.taopao.fastprinter.databinding.ActivityTemplate2Binding;
 import com.taopao.fastprinter.utils.AlertUtils;
+import com.taopao.fastprinter.utils.PrinterUtils;
 import com.taopao.fastprinter.utils.StringUtils;
 import com.tencent.mmkv.MMKV;
 
@@ -23,7 +23,7 @@ import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.util.List;
 
-public class Template2Activity extends BaseActivity {
+public class Template3Activity extends BaseActivity {
     private ActivityTemplate2Binding mBinding;
 
     @Override
@@ -41,7 +41,7 @@ public class Template2Activity extends BaseActivity {
                     .request(new OnPermissionCallback() {
                         @Override
                         public void onGranted(List<String> permissions, boolean all) {
-                            ActivityUtils.startActivity(Template2Activity.this, SearchBTActivity.class);
+                            ActivityUtils.startActivity(Template3Activity.this, SearchBTActivity.class);
                         }
 
                         @Override
@@ -140,7 +140,7 @@ public class Template2Activity extends BaseActivity {
         mPos.POS_S_TextOut("毛重" + StringUtils.prefixBlankToSpecifyLength(roughweight_str, 11) + "\r\n", "GBK", 0, 1, 1, 0, blackNumber);
         mPos.POS_S_TextOut("皮重" + StringUtils.prefixBlankToSpecifyLength(tareweight_str, 11) + "\r\n", "GBK", 0, 1, 1, 0, blackNumber);
         mPos.POS_S_TextOut("净重" + StringUtils.prefixBlankToSpecifyLength(netweight_str, 11) + "\r\n", "GBK", 0, 1, 1, 0, blackNumber);
-        mPos.POS_S_TextOut("~~~~~~~~~~~~~~~\r\n", "GBK", 0, 2, 2, 0, blackNumber);
+        mPos.POS_S_TextOut("---------------\r\n", "GBK", 0, 2, 2, 0, blackNumber);
         mPos.POS_FeedLine();
         mPos.POS_FeedLine();
         mPos.POS_FeedLine();

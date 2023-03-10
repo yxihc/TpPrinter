@@ -10,18 +10,6 @@
         android:layout_height="match_parent"
         android:orientation="vertical">
 
-        <TextView
-            android:id="@+id/tv_updata"
-            android:layout_width="280dp"
-            android:layout_height="40dp"
-            android:layout_gravity="center_horizontal"
-            android:layout_marginTop="10dp"
-            android:background="@drawable/shape_text_bg_red"
-            android:gravity="center"
-            android:text="App检查更新"
-            android:textColor="#ffffffff"
-            android:textSize="15sp" />
-
         <Button
             android:id="@+id/search"
             android:layout_width="match_parent"
@@ -29,10 +17,22 @@
             android:text="搜索并连接蓝牙"></Button>
 
         <TextView
+            android:id="@+id/tv_updata"
+            android:layout_width="280dp"
+            android:layout_height="40dp"
+            android:layout_gravity="center_horizontal"
+            android:background="@drawable/shape_text_bg_red"
+            android:gravity="center"
+            android:text="App检查更新"
+            android:textColor="#ffffffff"
+            android:textSize="15sp" />
+
+        <TextView
             android:id="@+id/tv_con"
             android:layout_width="280dp"
             android:layout_height="40dp"
             android:layout_gravity="center_horizontal"
+            android:layout_marginTop="20dp"
             android:background="@drawable/shape_text_bg_red"
             android:gravity="center"
             android:text="打印机已连接"
@@ -42,37 +42,43 @@
 
         <TextView
             android:id="@+id/tv_template1"
-            android:layout_width="280dp"
-            android:layout_height="40dp"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
             android:layout_gravity="center_horizontal"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginRight="20dp"
             android:background="@drawable/shape_text_bg_red"
             android:gravity="center"
             android:text="打印模版1"
             android:textColor="#ffffffff"
-            android:textSize="15sp" />
+            android:textSize="20sp" />
 
         <TextView
             android:id="@+id/tv_template2"
-            android:layout_width="280dp"
-            android:layout_height="40dp"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
             android:layout_gravity="center_horizontal"
-            android:layout_marginTop="72dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginRight="20dp"
             android:background="@drawable/shape_text_bg_red"
             android:gravity="center"
             android:text="打印模版2"
             android:textColor="#ffffffff"
-            android:textSize="15sp" />
-
+            android:textSize="20sp" />
         <TextView
-            android:id="@+id/tv_updateapp"
-            android:layout_width="280dp"
-            android:layout_height="40dp"
+            android:id="@+id/tv_template3"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
             android:layout_gravity="center_horizontal"
-            android:layout_marginTop="72dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginRight="20dp"
             android:background="@drawable/shape_text_bg_red"
             android:gravity="center"
             android:text="打印模版2"
             android:textColor="#ffffffff"
-            android:textSize="15sp" />
+            android:textSize="20sp" />
     </LinearLayout>
 </androidx.core.widget.NestedScrollView>

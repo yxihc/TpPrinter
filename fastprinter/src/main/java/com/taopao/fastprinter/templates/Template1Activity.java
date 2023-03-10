@@ -1,5 +1,6 @@
 package com.taopao.fastprinter.templates;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 
@@ -7,7 +8,11 @@ import androidx.annotation.Nullable;
 import androidx.viewbinding.ViewBinding;
 
 import com.blankj.utilcode.util.ActivityUtils;
+import com.hjq.permissions.OnPermissionCallback;
+import com.hjq.permissions.Permission;
+import com.hjq.permissions.XXPermissions;
 import com.lvrenyang.io.Pos;
+import com.taopao.fastprinter.MainActivity;
 import com.taopao.fastprinter.base.BaseActivity;
 import com.taopao.fastprinter.utils.PrinterUtils;
 import com.taopao.fastprinter.SearchBTActivity;
@@ -18,6 +23,7 @@ import com.tencent.mmkv.MMKV;
 
 import java.text.SimpleDateFormat;
 import java.util.Date;
+import java.util.List;
 
 public class Template1Activity extends BaseActivity {
     private ActivityTemplate1Binding mBinding;
@@ -32,7 +38,19 @@ public class Template1Activity extends BaseActivity {
     public void initView(@Nullable Bundle savedInstanceState) {
         setBleStatues();
         mBinding.tvCon.setOnClickListener(v -> {
-            ActivityUtils.startActivity(this, SearchBTActivity.class);
+            XXPermissions.with(this)
+                    .permission(Permission.Group.BLUETOOTH)
+                    .request(new OnPermissionCallback() {
+                        @Override
+                        public void onGranted(List<String> permissions, boolean all) {
+                            ActivityUtils.startActivity(Template1Activity.this, SearchBTActivity.class);
+                        }
+
+                        @Override
+                        public void onDenied(List<String> permissions, boolean never) {
+                        }
+                    });
+
         });
         mBinding.tvPrinter.setOnClickListener(v -> {
             print(0);

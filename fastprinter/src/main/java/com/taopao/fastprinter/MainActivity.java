@@ -2,6 +2,7 @@ package com.taopao.fastprinter;
 
 import android.app.ProgressDialog;
 import android.content.Intent;
+import android.net.Uri;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -18,6 +19,7 @@ import com.taopao.fastprinter.base.BaseActivity;
 import com.taopao.fastprinter.databinding.ActivityMainBinding;
 import com.taopao.fastprinter.templates.Template1Activity;
 import com.taopao.fastprinter.templates.Template2Activity;
+import com.taopao.fastprinter.templates.Template3Activity;
 import com.taopao.fastprinter.utils.FirimUtils;
 import com.taopao.fastprinter.utils.PrinterUtils;
 import com.tencent.mmkv.MMKV;
@@ -38,6 +40,7 @@ public class MainActivity extends BaseActivity {
 
     @Override
     public void initView(@Nullable Bundle savedInstanceState) {
+        FirimUtils.getAppinfo();
         mLoadingDialog = new ProgressDialog(this);
         mLoadingDialog.setMessage("正在自动连接");
         mBinding.search.setOnClickListener(v -> {
@@ -56,18 +59,17 @@ public class MainActivity extends BaseActivity {
         });
 
         mBinding.tvUpdata.setOnClickListener(v -> {
-//            Intent intent = new Intent();
-//            // 设置意图动作为打开浏览器
-//            intent.setAction(Intent.ACTION_VIEW);
-//            // 声明一个Uri
-//            String url = "https://spark.appc02.com/62y1";
-//            Uri uri = Uri.parse(url);
-//            intent.setData(uri);
-//            startActivity(intent);
-            FirimUtils.getAppinfo();
+            Intent intent = new Intent();
+            // 设置意图动作为打开浏览器
+            intent.setAction(Intent.ACTION_VIEW);
+            // 声明一个Uri
+            String url = "https://spark.appc02.com/62y1";
+            Uri uri = Uri.parse(url);
+            intent.setData(uri);
+            startActivity(intent);
         });
 
-//        applyBle();
+        applyBle();
 
         mBinding.tvTemplate1.setOnClickListener(v -> {
             ActivityUtils.startActivity(this, Template1Activity.class);
@@ -75,11 +77,11 @@ public class MainActivity extends BaseActivity {
         mBinding.tvTemplate2.setOnClickListener(v -> {
             ActivityUtils.startActivity(this, Template2Activity.class);
         });
-        mBinding.tvUpdateapp.setOnClickListener(v -> {
-            FirimUtils.getAppinfo();
+        mBinding.tvTemplate3.setOnClickListener(v -> {
+            ActivityUtils.startActivity(this, Template3Activity.class);
         });
-    }
 
+    }
 
     @Override
     protected void onResume() {
