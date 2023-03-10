@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="10dp"
+    android:gravity="center_vertical">
+
+    <TextView
+        android:id="@+id/tv_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="sds"
+        android:textColor="#666666"
+        android:textSize="15sp"
+        android:textStyle="bold" />
+
+    <EditText
+        android:id="@+id/et_content"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:background="@drawable/shape_follow_normal"
+        android:drawablePadding="10dp"
+        android:hint="填写序号"
+        android:inputType="number"
+        android:paddingLeft="18dp"
+        android:paddingTop="10dp"
+        android:paddingRight="18dp"
+        android:paddingBottom="10dp"
+        android:text=""
+        android:textColor="#333333"
+        android:textColorHint="#C8C8C8"
+        android:textSize="15sp" />
+
+    <Button
+        android:visibility="gone"
+        android:id="@+id/btn_date"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="选择日期"
+        android:textColor="#666666"
+        android:textSize="15sp"
+        android:textStyle="bold" />
+
+    <Button
+        android:visibility="gone"
+        android:id="@+id/btn_time"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="选择时间"
+        android:textColor="#666666"
+        android:textSize="15sp"
+        android:textStyle="bold" />
+
+    <CheckBox
+        android:id="@+id/cb_printer"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="打印"></CheckBox>
+</LinearLayout>
