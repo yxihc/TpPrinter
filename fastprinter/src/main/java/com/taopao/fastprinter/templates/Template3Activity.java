@@ -117,7 +117,7 @@ public class Template3Activity extends BaseActivity {
         String time = timeFormat.format(date);
         mBinding.etTime.setText(time);
 
-        mBinding.etCarnum.setText(MMKV.defaultMMKV().getString("carNum", ""));
+        mBinding.etCarnum.setText(MMKV.defaultMMKV().getString("carNum1", ""));
     }
 
     public void print(int blackNumber) {
@@ -145,7 +145,7 @@ public class Template3Activity extends BaseActivity {
         mPos.POS_FeedLine();
         mPos.POS_FeedLine();
         mPos.POS_FeedLine();
-        MMKV.defaultMMKV().putString("carNum", platenumber_str);
+        MMKV.defaultMMKV().putString("carNum1", platenumber_str);
     }
 
 }
