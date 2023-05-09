@@ -20,6 +20,7 @@ import com.taopao.fastprinter.databinding.ActivityMainBinding;
 import com.taopao.fastprinter.templates.Template1Activity;
 import com.taopao.fastprinter.templates.Template2Activity;
 import com.taopao.fastprinter.templates.Template3Activity;
+import com.taopao.fastprinter.templates.Template4Activity;
 import com.taopao.fastprinter.utils.FirimUtils;
 import com.taopao.fastprinter.utils.PrinterUtils;
 import com.tencent.mmkv.MMKV;
@@ -80,7 +81,9 @@ public class MainActivity extends BaseActivity {
         mBinding.tvTemplate3.setOnClickListener(v -> {
             ActivityUtils.startActivity(this, Template3Activity.class);
         });
-
+        mBinding.tvTemplate4.setOnClickListener(v -> {
+            ActivityUtils.startActivity(this, Template4Activity.class);
+        });
     }
 
     @Override

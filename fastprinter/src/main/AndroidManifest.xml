@@ -33,6 +33,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.TpPrinter">
         <activity
+            android:name=".templates.Template4Activity"
+            android:exported="false" />
+        <activity
             android:name=".templates.Template2Activity"
             android:exported="false" />
         <activity

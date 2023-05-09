@@ -80,5 +80,18 @@
             android:text="打印模版3"
             android:textColor="#ffffffff"
             android:textSize="20sp" />
+        <TextView
+            android:id="@+id/tv_template4"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginRight="20dp"
+            android:background="@drawable/shape_text_bg_red"
+            android:gravity="center"
+            android:text="打印模版4（宁）"
+            android:textColor="#ffffffff"
+            android:textSize="20sp" />
     </LinearLayout>
 </androidx.core.widget.NestedScrollView>
