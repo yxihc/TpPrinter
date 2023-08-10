@@ -178,6 +178,48 @@
                 android:textStyle="bold" />
         </LinearLayout>
 
+        <LinearLayout
+            android:visibility="gone"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="货号："
+                android:textColor="#666666"
+                android:textSize="15sp"
+                android:textStyle="bold" />
+
+            <EditText
+                android:layout_weight="1"
+                android:id="@+id/et_huonum"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/shape_follow_normal"
+                android:drawablePadding="10dp"
+                android:hint="填写货号"
+                android:inputType="number"
+                android:paddingLeft="18dp"
+                android:paddingTop="10dp"
+                android:paddingRight="18dp"
+                android:paddingBottom="10dp"
+                android:text=""
+                android:textColor="#333333"
+                android:textColorHint="#C8C8C8"
+                android:textSize="15sp" />
+            <Button
+                android:id="@+id/btn_addline2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="填入横杠"
+                android:textColor="#666666"
+                android:textSize="15sp"
+                android:textStyle="bold" />
+        </LinearLayout>
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -353,53 +395,5 @@
             android:text="打印加黑"
             android:textColor="#ffffffff"
             android:textSize="15sp" />
-
-
-
-        <TextView
-            android:id="@+id/tv_printer1"
-            android:layout_width="280dp"
-            android:layout_height="40dp"
-            android:layout_gravity="center_horizontal"
-            android:layout_marginTop="72dp"
-            android:background="@drawable/shape_text_bg_red"
-            android:gravity="center"
-            android:text="打印测试1"
-            android:textColor="#ffffffff"
-            android:textSize="15sp" />
-        <TextView
-            android:id="@+id/tv_printer2"
-            android:layout_width="280dp"
-            android:layout_height="40dp"
-            android:layout_gravity="center_horizontal"
-            android:layout_marginTop="72dp"
-            android:background="@drawable/shape_text_bg_red"
-            android:gravity="center"
-            android:text="打印测试1"
-            android:textColor="#ffffffff"
-            android:textSize="15sp" />
-        <TextView
-            android:id="@+id/tv_printer3"
-            android:layout_width="280dp"
-            android:layout_height="40dp"
-            android:layout_gravity="center_horizontal"
-            android:layout_marginTop="72dp"
-            android:background="@drawable/shape_text_bg_red"
-            android:gravity="center"
-            android:text="打印测试3"
-            android:textColor="#ffffffff"
-            android:textSize="15sp" />
-        <TextView
-            android:id="@+id/tv_printer4"
-            android:layout_width="280dp"
-            android:layout_height="40dp"
-            android:layout_gravity="center_horizontal"
-            android:layout_marginTop="72dp"
-            android:background="@drawable/shape_text_bg_red"
-            android:gravity="center"
-            android:text="打印测试4"
-            android:textColor="#ffffffff"
-            android:textSize="15sp" />
-
     </LinearLayout>
 </androidx.core.widget.NestedScrollView>
