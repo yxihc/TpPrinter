@@ -1,2 +1,4 @@
 rootProject.name = "TpPrinter"
 include ':fastprinter'
+include ':speechDemo'
+include ':aiapp'
