@@ -15,7 +15,11 @@ android {
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
         consumerProguardFiles 'consumer-rules.pro'
     }
-
+    sourceSets {
+        main {
+            jniLibs.srcDirs = ['libs']
+        }
+    }
     buildTypes {
         release {
             minifyEnabled false
@@ -37,6 +41,7 @@ dependencies {
     androidTestImplementation 'androidx.test.ext:junit:1.1.5'
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.5.1'
     implementation files('libs/SparkChain.aar')
+    implementation files('libs/Msc.jar')
     implementation 'com.blankj:utilcodex:1.31.1'
     implementation 'com.google.code.gson:gson:2.10.1'
 

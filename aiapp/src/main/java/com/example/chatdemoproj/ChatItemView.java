@@ -45,6 +45,14 @@ public class ChatItemView extends FrameLayout {
 
         mTvLeft = mRootView.findViewById(R.id.tv_left);
         mTvRight = mRootView.findViewById(R.id.tv_right);
+
+        mTvLeft.setOnClickListener(view -> {
+            speed();
+        });
+    }
+
+    private void speed() {
+        TTSManager.getInstance().convertTextToSpeech(mTvLeft.getText().toString().trim());
     }
 
     public void showLeft() {
